@@ -1,3 +1,14 @@
+---
+title: Chatbot Fork Space
+emoji: 🏃
+colorFrom: indigo
+colorTo: blue
+sdk: streamlit
+sdk_version: 1.40.0
+app_file: streamlit.py
+pinned: false
+---
+
 # Chatbot
 
 A custom question-answering chatbot that leverages Langchain and Gemini AI via Streamlit.
