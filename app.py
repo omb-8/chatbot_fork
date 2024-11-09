@@ -8,7 +8,7 @@ import sys
 sys.modules["sqlite3"] = pysqlite3
 
 # Load documents and initialize components
-documents = load_and_split_document("C:\Users\olivi\OneDrive\Documents\chatbot_fork\22_studenthandbook-22-23_f2.pdf")
+documents = load_and_split_document(r"C:\Users\olivi\OneDrive\Documents\chatbot_fork\22_studenthandbook-22-23_f2.pdf")
 retriever = initialize_retriever(documents)
 rag_chain = create_rag_chain(retriever)
 app = setup_workflow(rag_chain)
