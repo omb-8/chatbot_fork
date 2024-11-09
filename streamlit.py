@@ -25,7 +25,7 @@ gemini_embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 model = ChatGoogleGenerativeAI(model="gemini-1.0-pro", convert_system_message_to_human=True)
 
 # Load the document
-document_loader = PyPDFLoader("/Users/maryam/Documents/UWF/our/chatbot/22_studenthandbook-22-23_f2.pdf")
+document_loader = PyPDFLoader("C:\Users\olivi\OneDrive\Documents\chatbot_fork\22_studenthandbook-22-23_f2.pdf")
 doc = document_loader.load()
 
 # Split documents
