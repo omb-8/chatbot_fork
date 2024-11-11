@@ -4,17 +4,19 @@ on:
   push:
     branches: [main]
 
-    # to run this workflow manually from the Actions tab
-    workflow_dispatch:
+  # to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
-  sync-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Push to hub
-      env:
-        GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-      run: git push --force https://omb8:$GOOGLE_API_KEY@huggingface.co/spaces/omb8/chatbot_fork_space main
+  sync-on: 
+    runs-on: ubuntu-latest
+  
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Push to hub
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: git push --force https://omb8:$GOOGLE_API_KEY@huggingface.co/spaces/omb8/chatbot_fork_space main
       
